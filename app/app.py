@@ -8,7 +8,7 @@ from PIL import Image
 from tensorflow.keras.models import load_model # type: ignore
 from tensorflow.keras.preprocessing import image # type: ignore
 
-datapath = 'D:\\DL Projects\\Covid XRAY\\app\\sample\\'
+datapath = '\\app\\sample\\'
 
 @st.cache_data 
 def load_sample_data1():
@@ -20,7 +20,7 @@ def load_sample_data2():
     img2 = Image.open(datapath + '\\data1p.jpeg')
     return img2
 
-path = 'D:\\DL Projects\\Covid XRAY\\app\\model\\resnet_model.h5'  # Update this with the actual path to your model
+path = "D:\\DL Projects\\Covid XRAY\\app\model\\resnet_model.h5"  # Update this with the actual path to your model
 model = load_model(path)
 
 # Load and preprocess an image
