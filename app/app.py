@@ -8,7 +8,7 @@ from PIL import Image
 from tensorflow.keras.models import load_model # type: ignore
 from tensorflow.keras.preprocessing import image # type: ignore
 
-datapath = '\\app\\sample\\'
+datapath = 'D:\\DL Projects\\Covid XRAY\\app\\sample'
 
 @st.cache_data 
 def load_sample_data1():
