@@ -1,0 +1,14 @@
+streamlit 
+streamlit_extras
+streamlit_option_menu
+pandas 
+numpy
+matplotlib
+seaborn
+fsspec
+PIL
+tensorflow
+tensorflow.keras.models
+tensorflow.keras.preprocessing
+tensorflow.keras.utils
+os
