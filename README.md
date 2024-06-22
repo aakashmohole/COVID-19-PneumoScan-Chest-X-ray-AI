@@ -4,9 +4,10 @@ How to reach me: Connect with me on Twitter [@Aakash Mohole](https://twitter.com
 
 
 🟢 Click on the image to see the demo video:
+
 [![COVID-19-PneumoScan-Chest-X-ray-AI](./images/run.png)](https://youtu.be/I4qK5sX8jkI)
 
-
+## Working 
 ![AE-CNN Model](./app/ae-cnn-final.png)
 
 ## Encoder, Decoder, and Autoencoder
@@ -47,3 +48,49 @@ The model is evaluated on a separate test set to measure its accuracy, sensitivi
 
 ## Training Progress Chart -
 ![Model](./images/training.png)
+
+
+## Tools ⚙️
+
+### Libraries & Framework:
+![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)
+![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
+![Seaborn](https://img.shields.io/badge/Seaborn-%23FF6F00.svg?style=for-the-badge&logo=Seaborn&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/Tensorflow-%23FF6F00.svg?style=for-the-badge&logo=Tensorflow&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-6DA55F?style=for-the-badge&logo=streamlit&logoColor=white)
+
+### Language:
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+
+
+## Setting Up
+
+To run the web application locally, follow these steps:
+
+Clone this repository
+
+``` bash
+git clone https://github.com/aakashmohole/COVID-19-PneumoScan-Chest-X-ray-AI.git
+```
+
+Install the necessary dependencies using 
+
+``` bash
+ pip install -r requirements.txt
+```
+
+Run the Streamlit application using 
+
+``` bash
+cd app
+```
+
+``` bash
+streamlit run app.py
+```
+
+Access the application in your web browser at http://localhost:5000.
+
+
