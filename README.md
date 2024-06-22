@@ -35,3 +35,8 @@ The model is trained on a labeled dataset of chest X-ray images, with labels ind
 ### Evaluation
 The model is evaluated on a separate test set to measure its accuracy, sensitivity, specificity, and other relevant metrics.
 
+## Prediction Output -
+![Output](./images/output.png)
+
+## Training Progress Chart -
+![Model](./images/training.png)
