@@ -1,4 +1,11 @@
-﻿# COVID-19-PneumoScan-Chest-X-ray-AI
+How to reach me: Connect with me on Twitter [@Aakash Mohole](https://twitter.com/AakashMohole) | Linkedin [@Aakash Mohole](https://www.linkedin.com/in/aakash-mohole-231359233/)
+
+ # COVID-19-PneumoScan-Chest-X-ray-AI
+
+
+🟢 Click on the image to see the demo video:
+[![COVID-19-PneumoScan-Chest-X-ray-AI](./images/run.png)](https://youtu.be/I4qK5sX8jkI)
+
 
 ![AE-CNN Model](./app/ae-cnn-final.png)
 
