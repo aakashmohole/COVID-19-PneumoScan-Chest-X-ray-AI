@@ -8,19 +8,22 @@ from PIL import Image
 from tensorflow.keras.models import load_model # type: ignore
 from tensorflow.keras.preprocessing import image # type: ignore
 
-datapath = 'D:\\DL Projects\\Covid XRAY\\app\\sample'
+# datapath = 'D:\\DL Projects\\Covid XRAY\\app\\sample'
+datapath = './sample/'
 
 @st.cache_data 
 def load_sample_data1():
-    img1 = Image.open(datapath + '\\data1n.jpeg')
+    img1 = Image.open(datapath + '/data1n.jpeg')
+    # img1 = Image.open(datapath + '\\data1n.jpeg')
     return img1
 
 @st.cache_data 
 def load_sample_data2():
-    img2 = Image.open(datapath + '\\data1p.jpeg')
+    img2 = Image.open(datapath + '/data1p.jpeg')
+    # img2 = Image.open(datapath + '\\data1p.jpeg')
     return img2
 
-path = "D:\\DL Projects\\Covid XRAY\\app\model\\resnet_model.h5"  # Update this with the actual path to your model
+path = "./model/resnet_model.h5"  # Update this with the actual path to your model
 model = load_model(path)
 
 # Load and preprocess an image
@@ -35,7 +38,7 @@ def load_and_preprocess_image(img):
 
 # STREAMLIT CODE
 
-top_image = Image.open('D:\\DL Projects\\Covid XRAY\\app\\trippyPattern.png')
+top_image = Image.open('./trippyPattern.png')
 st.sidebar.image(top_image)
 
 st.sidebar.title("COVID-19 PneumoScan")
@@ -75,12 +78,12 @@ with home_tab:
                 sample_image = load_sample_data2()
                 st.image(sample_image, caption='Sample Data II', use_column_width=True)
         st.write("")
-        st.write("Classifying...")
-
         if sample_image is not None:
             sample_img_arr = load_and_preprocess_image(sample_image)
             sample_prediction = model.predict(sample_img_arr)
-
+            
+        if st.button("Detect", type="primary"):
+            st.write("Classifying...")
             if sample_prediction[0][0] > 0.5:
                 st.success("The Patient has Positive X-Ray: COVID-19 Positive")
             else:
@@ -93,19 +96,22 @@ with home_tab:
             uploaded_image = Image.open(uploaded_image_file)
             st.image(uploaded_image, caption='Uploaded Chest X-ray', use_column_width=True)
             st.write("")
-            st.write("Classifying...")
+            
 
             uploaded_img_array = load_and_preprocess_image(uploaded_image)
             uploaded_prediction = model.predict(uploaded_img_array)
-
-            if uploaded_prediction[0][0] > 0.5:
-                st.success("The Patient has Positive X-Ray: COVID-19 Positive")
-            else:
-                st.warning("The Patient has Normal X-Ray: COVID-19 Negative")
+            
+            
+            if st.button("Detect", type="primary"):
+                st.write("Classifying...")
+                if uploaded_prediction[0][0] > 0.5:
+                    st.success("The Patient has Positive X-Ray: COVID-19 Positive")
+                else:
+                    st.warning("The Patient has Normal X-Ray: COVID-19 Negative")
 
 with working_tab :
     st.title('COVID-19 PneumoScan Working!')
-    st.image('D:\\DL Projects\\Covid XRAY\\app\\ae-cnn-final.png')
+    st.image('./ae-cnn-final.png')
     st.header('Encoder, Decoder, and Autoencoder')
     st.write("Overview of AE-CNN: Our proposed framework consists of three main blocks namely encoder, decoder, and classifier. The figure shows the autoencoder based convolutional neural network (AE-CNN) model for disease classification. Here, autoencoder reduces the spatial dimension of the imput image of size 1024 × 1024. The encoder produces a latent code tensor of size 256 × 256 and decoder reconstructs back the image. This latent code tensor is passed through a CNN classifier for classifying the chest x-rays. The final loss is the weighted sum of the resconstruction loss by decoder and classification loss by the CNN classifier.")
     st.write("Encoder:")
