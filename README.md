@@ -21,7 +21,7 @@ Overview of AE-CNN: Our proposed framework consists of three main blocks namely 
 **ResNet-50 (Residual Network):**  
 ResNet-50 is a deep convolutional neural network that is 50 layers deep. It is well-known for its ability to handle the vanishing gradient problem, which is common in very deep networks. This is achieved through the introduction of residual blocks.
 
-![Model](./app/ae-cnn-final.png)
+![Model](./images/model.png)
 
 ### Feature Extraction with ResNet-50 Encoder
 The **ResNet-50** model's convolutional layers act as an encoder, extracting high-level features from chest X-ray images.
